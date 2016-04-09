@@ -24,6 +24,8 @@
   *	**OR**
   *	**NOT**
 *	**ORDER BY xxx ASC/DESC (NULLS FIRST/LAST)**;
+*	adding number to a date, increases day count;
+*	substracting to dates results in the number of days between the two;
 
 ###Single row functions
 *	**Case conversion functions**:
@@ -36,7 +38,7 @@
   - **SUBSTR**('*string**', *first_num*, *last_num*);
   - **LENGTH**('*string*');
   - **CONCAT**('*string*','*string*') rarely used, equivalent to ||, works only with a two strings;
-  - **INSTR('*string*',''*string*') - return the postion of second string in the first one;
+  - **INSTR**('*string*',''*string*') - return the postion of second string in the first one;
   - **TRIM**('*string*'), deletes all spaces;
   - **LTRIM**('*string*') deletes spaces on the left;
   - **RTRIM**('*string*') deletes spaces on the right;
@@ -50,3 +52,19 @@
   - **CEIL**(*number*) returns the smallest integer greater or equal to a specified number ex CEIL(2,67) returns '3';
   - **FLOOR**(*number*) returns the largest integer smaller or equal to a specified number ex CEIL(2,67) returns '2';
   - **MOD**(*number*, *number*) return reminder of division;
+
+*	**Dates functions**:
+  - **ADD_MONTHS**(*date*,*number*);
+  - **MONTHS_BETWEEN**(*date*,*date*);
+  - **ROUND**(*date*, 'MONTH'/'YEAR') rounds the date;
+  - **TRUNC**(*date*, 'MONTH'/'YEAR') rounds the date;
+  - **NEXT_DAY**(*date*, 'TUESDAY') returns next specified day of week;
+  - **LAST_DAY**(*date*) returns last day of the month;
+
+*	**Conversion functions**:
+  - **ADD_MONTHS**(*date*,*number*);
+  - **MONTHS_BETWEEN**(*date*,*date*);
+  - **ROUND**(*date*, 'MONTH'/'YEAR') rounds the date;
+  - **TRUNC**(*date*, 'MONTH'/'YEAR') rounds the date;
+  - **NEXT_DAY**(*date*, 'TUESDAY') returns next specified day of week;
+  - **LAST_DAY**(*date*) returns last day of the month;
