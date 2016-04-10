@@ -73,8 +73,8 @@
   - **COALESCE**(*Expression1*, *Expression2*,...,*ExpressionX*) returns first expression that is not NULL or the last expression if all previous are NULL;
 
 *	**Conditional Expressions**:
-  - **CASE** *Expression1* WHEN *comparison_expression1* then *return_expression1*
-  [WHEN *comparison_expression2* then *return_expression2*
-  WHEN *comparison_expressionN* then *return_expressionN*
-  ELSE *else_expr*]
+  - **CASE** *expression* WHEN *comparison_expression1* THEN *return_expression1*
+  [WHEN *comparison_expression2* THEN *return_expression2*
+  WHEN *comparison_expressionN* THEN0 *return_expressionN*
+  ELSE *else_expr*] **END**
 
