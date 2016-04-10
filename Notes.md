@@ -71,4 +71,10 @@
   - **NVL2**(*Expression1*, *Expression2*, *Expression3*) if *Expression1* is not NULL, return *Expression2*, else return *Expression3*, *Expression1* does not to be of the same type as *Expression2* and *Expression3*, but *Expression2* and *Expression3* must be same data type;
   - **NULLIF**(*Expression1*, *Expression2*) compares both expression, return NULL if they are equal, if not return *Expression1*, could be followe to is NULL to check if given condition is met;
   - **COALESCE**(*Expression1*, *Expression2*,...,*ExpressionX*) returns first expression that is not NULL or the last expression if all previous are NULL;
-  - 
+
+*	**Conditional Expressions**:
+  - **CASE** *Expression1* WHEN *comparison_expression1* then *return_expression1*
+  [WHEN *comparison_expression2* then *return_expression2*
+  WHEN *comparison_expressionN* then *return_expressionN*
+  ELSE *else_expr*]
+
