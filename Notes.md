@@ -104,5 +104,4 @@
   - **NATURAL JOIN** joins two tables with the columns that have the same name, if combination of columns having same name is not matched rows are not returned;
   - *equijoin* is join with *USING* statement, it is join using only specific columns in two tables, syntax looks as follows:... JOIN *table* USING (*column_name*), more than one *column_name* could be used;
   - table aliases are used for handling duplicate column names in two tables, tehy increase readability and query performance;
-  - 
-  
+
