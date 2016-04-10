@@ -24,8 +24,8 @@
   *	**OR**
   *	**NOT**
 *	**ORDER BY xxx ASC/DESC (NULLS FIRST/LAST)**;
-*	adding number to a date, increases day count;
-*	substracting to dates results in the number of days between the two;
+*	adding a number to a date, increases day count;
+*	substracting two dates results in the number of days between the two;
 
 ###Single row functions
 *	**Case conversion functions**:
@@ -44,7 +44,7 @@
   - **RTRIM**('*string*') deletes spaces on the right;
   - **REPLACE**('*string*',''*string*','*string*');
   - **LPAD**('*string*',*number*,'*character*') fills the entry with characters on the left side, so the whole length equals *number*;
-  - **RPAD**('*string*',*number*,'*character*') analogous to the above;
+  - **RPAD**('*string*',*number*,'*character*') analogous to the above but fills the entry on the right side;
   
 *	**Numeric functions**:
   - **ROUND**(*number*,*number*);
@@ -67,15 +67,15 @@
   - **TO_DATE**(*char*[,'format_model']);
 
 *	**Null Value Functions**:
-  - **NVL**(*Expression1*, *Expression2*) if *Expression1* is NULL return *Expression2*, data types must match, useful in arithmetic operations to avoid calculation error;
+  - **NVL**(*Expression1*, *Expression2*) if *Expression1* is NULL returns *Expression2*, data types must match, useful in arithmetic operations to avoid calculation error;
   - **NVL2**(*Expression1*, *Expression2*, *Expression3*) if *Expression1* is not NULL, return *Expression2*, else return *Expression3*, *Expression1* does not to be of the same type as *Expression2* and *Expression3*, but *Expression2* and *Expression3* must be same data type;
-  - **NULLIF**(*Expression1*, *Expression2*) compares both expression, return NULL if they are equal, if not return *Expression1*, could be followe to is NULL to check if given condition is met;
+  - **NULLIF**(*Expression1*, *Expression2*) compares both expression, return NULL if they are equal, if not return *Expression1*, could be followed with checking if it is NULL to check if given condition is met;
   - **COALESCE**(*Expression1*, *Expression2*,...,*ExpressionX*) returns first expression that is not NULL or the last expression if all previous are NULL;
 
 *	**Conditional Expressions**:
   - **CASE** *expression* WHEN *comparison_expression1* THEN *return_expression1*
   [WHEN *comparison_expression2* THEN *return_expression2*
-  WHEN *comparison_expressionN* THEN0 *return_expressionN*
+  WHEN *comparison_expressionN* THEN *return_expressionN*
   ELSE *else_expr*] **END**
   - *expression* and *comparison_expression* msut be of the same data type;
   - **CASE** can be used both in **SELECT** and **WHERE** clauses;
