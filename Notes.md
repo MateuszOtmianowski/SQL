@@ -77,4 +77,11 @@
   [WHEN *comparison_expression2* THEN *return_expression2*
   WHEN *comparison_expressionN* THEN0 *return_expressionN*
   ELSE *else_expr*] **END**
+  - *expression* and *comparison_expression* msut be of the same data type;
+  - **CASE** can be used both in **SELECT** and **WHERE** clauses;
+  - **DECODE**(*col*|*expression*, *search1*, *result1* [,*search2*,*result2*,...,][,*default*]) could be used as alternative to **CASE**;
+  - last alone expression is used as default value if none of decode statements are met;
+ 
+*	**Group functions**:
+  - **CASE** *expression* WHEN *comparison_expression1* THEN *return_expression1*
 
