@@ -83,5 +83,26 @@
   - last alone expression is used as default value if none of decode statements are met;
  
 *	**Group functions**:
-  - **CASE** *expression* WHEN *comparison_expression1* THEN *return_expression1*
+  - SELECT group_function([DISTINCT|ALL] *column_name*),... FROM *table* [WHERE *condition];
+  - group functions operate on multiple rows and return one result per group;
+  - gfs are used after SELECT keyword, multiple gfs can be used in one SELECT statement;
+  - gfs ignore NULL values, null value functions can be used to handle such cases as for example COUNT(nvl(commission_pct,0));
+  - ALL is default;
+  - gfs include: *AVG*, *COUNT*, *MAX*, *MIN*, *SUM*;
+  - **COUNT**(*) includes rows with NULL values;
+  - nested group functions need GROUP BY clause;
+ 
+*	**GROUP BY clause**:
+  - column aliases can not be used in GROUP BY clauses;
+  - SELECT clause can not have any different columns then used in GROUP BY clause;
 
+*	**HAVING clause**:
+  - **WHERE** clause restricts rows, **HAVING** clause restricts groups;
+  - **HAVING** clause is used after group by clause;
+ 
+*	**Joins**:
+  - **NATURAL JOIN** joins two tables with the columns that have the same name, if combination of columns having same name is not matched rows are not returned;
+  - *equijoin* is join with *USING* statement, it is join using only specific columns in two tables, syntax looks as follows:... JOIN *table* USING (*column_name*), more than one *column_name* could be used;
+  - table aliases are used for handling duplicate column names in two tables, tehy increase readability and query performance;
+  - 
+  
