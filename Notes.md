@@ -10,7 +10,7 @@
 *	**SELECT ‘XXX’** from table returns XXX for each row in the table;
 *	**||** can be used to concatenate columns into one;
 *	Any operation (like mathematical) with NULL values, except concatenate, returns NULL;
-*	**<>** and **!=** can both be used and give the same result;
+*	**<>** and **!=** can both be used for finding not equal objects and give the same result;
 *	**BETWEEN XXX AND XXX** can be used with numbers, dates and characters;
 *	**IN** queries a database for the values in a given list;
 *	**LIKE** is used for searching in string values, following special signs can be used:
