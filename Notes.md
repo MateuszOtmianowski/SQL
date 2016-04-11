@@ -38,11 +38,11 @@
   - **SUBSTR**('*string**', *first_num*, *last_num*);
   - **LENGTH**('*string*');
   - **CONCAT**('*string*','*string*') rarely used, equivalent to ||, works only with a two strings;
-  - **INSTR**('*string*',''*string*') - return the postion of second string in the first one;
+  - **INSTR**('*string*','*string*') - return the postion of second string in the first one;
   - **TRIM**('*string*'), deletes all spaces;
   - **LTRIM**('*string*') deletes spaces on the left;
   - **RTRIM**('*string*') deletes spaces on the right;
-  - **REPLACE**('*string*',''*string*','*string*');
+  - **REPLACE**('*string*','*string*','*string*');
   - **LPAD**('*string*',*number*,'*character*') fills the entry with characters on the left side, so the whole length equals *number*;
   - **RPAD**('*string*',*number*,'*character*') analogous to the above but fills the entry on the right side;
   
@@ -102,6 +102,6 @@
  
 *	**Joins**:
   - **NATURAL JOIN** joins two tables with the columns that have the same name, if combination of columns having same name is not matched rows are not returned;
-  - *equijoin* is join with *USING* statement, it is join using only specific columns in two tables, syntax looks as follows:... JOIN *table* USING (*column_name*), more than one *column_name* could be used;
+  - *equijoin* is join with **USING** statement, it is join using only specific columns in two tables, syntax looks as follows:... **JOIN** *table* **USING** (*column_name*), more than one *column_name* could be used;
   - table aliases are used for handling duplicate column names in two tables, they increase readability and query performance;
 
