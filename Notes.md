@@ -33,7 +33,7 @@
   -	**UPPER**: converts all input characters to uppercase;
   -	**INITCAP**: converts first character to uppercase and the rest to lowercase;
 * It is a good idea to use in search querries UPPER or LOWER, becouse in that case you don't need to know how the entry was written, this could look as follows:
-  > WHERE UPPER(*column_name*)=*'something'*;
+  > WHERE UPPER(*column_name*)=*'SOMETHING'*;
 * **Character manipulation functions**:
   - **SUBSTR**('*string**', *first_num*, *last_num*);
   - **LENGTH**('*string*');
