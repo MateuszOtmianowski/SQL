@@ -58,7 +58,7 @@
   - **MONTHS_BETWEEN**(*date*,*date*);
   - **ROUND**(*date*, 'MONTH'/'YEAR') rounds the date;
   - **TRUNC**(*date*, 'MONTH'/'YEAR') rounds the date;
-  - **NEXT_DAY**(*date*, 'TUESDAY') returns next specified day of week;
+  - **NEXT_DAY**(*date*, 'TUESDAY') returns date of the next specified day of week;
   - **LAST_DAY**(*date*) returns last day of the month;
 
 *	**Conversion functions**:
@@ -77,17 +77,17 @@
   [WHEN *comparison_expression2* THEN *return_expression2*
   WHEN *comparison_expressionN* THEN *return_expressionN*
   ELSE *else_expr*] **END**
-  - *expression* and *comparison_expression* msut be of the same data type;
+  - *expression* and *comparison_expression* must be of the same data type;
   - **CASE** can be used both in **SELECT** and **WHERE** clauses;
   - **DECODE**(*col*|*expression*, *search1*, *result1* [,*search2*,*result2*,...,][,*default*]) could be used as alternative to **CASE**;
-  - last alone expression is used as default value if none of decode statements are met;
+  - last expression (*default*) is used as default value if none of decode statements are met;
  
 *	**Group functions**:
   - SELECT group_function([DISTINCT|ALL] *column_name*),... FROM *table* [WHERE *condition];
   - group functions operate on multiple rows and return one result per group;
   - gfs are used after SELECT keyword, multiple gfs can be used in one SELECT statement;
   - gfs ignore NULL values, null value functions can be used to handle such cases as for example COUNT(nvl(commission_pct,0));
-  - ALL is default;
+  - ALL is default parameter;
   - gfs include: *AVG*, *COUNT*, *MAX*, *MIN*, *SUM*;
   - **COUNT**(*) includes rows with NULL values;
   - nested group functions need GROUP BY clause;
@@ -103,5 +103,5 @@
 *	**Joins**:
   - **NATURAL JOIN** joins two tables with the columns that have the same name, if combination of columns having same name is not matched rows are not returned;
   - *equijoin* is join with *USING* statement, it is join using only specific columns in two tables, syntax looks as follows:... JOIN *table* USING (*column_name*), more than one *column_name* could be used;
-  - table aliases are used for handling duplicate column names in two tables, tehy increase readability and query performance;
+  - table aliases are used for handling duplicate column names in two tables, they increase readability and query performance;
 
