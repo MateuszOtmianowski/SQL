@@ -8,7 +8,7 @@
 *	**q’[XXX]’** allows the use of special characters, any character can be used instead of “[“ and “]” as far as they are the same;
 *	**DISTINCT** is used for showing unique combination of values, only one DISTINCT operator can be used in one single query;
 *	**SELECT ‘XXX’** from table returns XXX for each row in the table;
-*	**||** could be used to concatenate columns into one;
+*	**||** can be used to concatenate columns into one;
 *	Any operation (like mathematical) with NULL values, except concatenate, returns NULL;
 *	**<>** and **!=** can both be used and give the same result;
 *	**BETWEEN XXX AND XXX** can be used with numbers, dates and characters;
