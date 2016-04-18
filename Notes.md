@@ -13,7 +13,7 @@
 *	**<>** and **!=** can both be used for finding not equal objects and give the same result;
 *	**BETWEEN XXX AND XXX** can be used with numbers, dates and characters;
 *	**IN**(*'something'*,*'something'*) queries a database for the values in a given list;
-*	**LIKE** is used for searching in string values, following special signs can be used:
+*	**LIKE** is used for searching for string values, following special signs can be used:
 >	**%**: 0 or more characters;
 >	**_**: 1 character;
 *	**LIKE** without special characters is equal to “=” operator but is slower;
