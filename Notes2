@@ -1,0 +1,5 @@
+- || is the concatenation operator; it merges multiple texts into one (in SQL Server use +, in MySQL use concat()),
+- length(x) returns the length of text x (in SQL Server use len()),
+- lower(x), upper(x), initcap(x) will all write x in the appropriate case,
+- substring(x, y, z) will return the part of x starting from position y and with z characters in length (in Oracle use substr()),
+- replace(x,y,z) will search x for y, and if it finds any y, it will replace if with z.
